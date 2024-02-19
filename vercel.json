@@ -1,0 +1,13 @@
+{
+    "builds": [{
+        "src": "django_iplogger/wsgi.py",
+        "use": "@vercel/python",
+        "config": { "maxlambdaSize": "15mb", "runtime": "python3.11"}
+    }],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "django_iplogger/wsgi.py"
+        }
+    ]
+}
